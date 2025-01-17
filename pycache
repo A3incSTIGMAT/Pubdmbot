@@ -1,0 +1,10 @@
+
+### 8. **`tests/` (папка с тестами)**
+Если хотите писать тесты для вашего бота, создайте папку `tests/` и добавьте в неё файлы с тестами. Например, с использованием `unittest`:
+```python
+import unittest
+from app import send_welcome
+
+class TestBot(unittest.TestCase):
+    def test_send_welcome(self):
+        self.assertEqual(send_welcome(), "Welcome to the bot!")
